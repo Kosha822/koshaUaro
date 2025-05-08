@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ku" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دابەزاندنی بەرنامەی ئایفۆن</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --yellow: #FFD700;
+            --red: #FF4500;
+            --dark-yellow: #FFC000;
+            --dark-red: #E03C31;
+            --white: #FFFFFF;
+            --black: #000000;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, var(--yellow), var(--red));
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .download-container {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 500px;
+            padding: 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .download-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 10px;
+            background: linear-gradient(90deg, var(--yellow), var(--red));
+        }
+
+        .iphone-mockup {
+            width: 180px;
+            height: 350px;
+            background: #111;
+            border-radius: 30px;
+            margin: 0 auto 25px;
+            padding: 15px;
+            position: relative;
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .iphone-screen {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--dark-yellow), var(--dark-red));
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            color: white;
+        }
+
+        .app-icon {
+            width: 80px;
+            height: 80px;
+            background-color: var(--white);
+            border-radius: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .app-icon i {
+            font-size: 40px;
+            color: var(--black);
+        }
+
+        h1 {
+            color: var(--black);
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        p {
+            color: #555;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .download-btn {
+            background: linear-gradient(90deg, var(--yellow), var(--red));
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(255, 69, 0, 0.3);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255, 69, 0, 0.4);
+        }
+
+        .download-btn i {
+            margin-left: 10px;
+        }
+
+        .steps {
+            margin-top: 30px;
+            text-align: right;
+        }
+
+        .step {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            background-color: #f9f9f9;
+            padding: 10px 15px;
+            border-radius: 10px;
+            border-right: 4px solid var(--yellow);
+        }
+
+        .step-number {
+            background-color: var(--yellow);
+            color: white;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 10px;
+            font-weight: bold;
+        }
+
+        .qr-code {
+            margin: 25px auto;
+            width: 150px;
+            height: 150px;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .qr-code img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        @media (max-width: 480px) {
+            .download-container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 20px;
+            }
+            
+            .download-btn {
+                padding: 12px 25px;
+                font-size: 16px;
+            }
+            
+            .iphone-mockup {
+                width: 150px;
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="download-container">
+        <div class="iphone-mockup">
+            <div class="iphone-screen">
+                <div class="app-icon">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h2 style="color: white;">بەرنامەکەمان</h2>
+                <p style="color: white; font-size: 14px;">دابەزێنە بۆ ئایفۆن</p>
+            </div>
+        </div>
+        
+        <h1>بەرنامەی ئایفۆن دابەزێنە</h1>
+        <p>بەرنامەکەمان بە فایلی IPA دابەزێنە بۆ ئایفۆن</p>
+        
+        <button class="download-btn" id="downloadBtn">
+            <i class="fas fa-download"></i> دابەزاندن
+        </button>
+        
+        <div class="qr-code">
+            <!-- QR Code placeholder - replace with your actual QR code -->
+            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjAwIj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0id2hpdGUiLz48cmVjdCB4PSI1MCIgeT0iNTAiIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSJibGFjayIvPjwvc3ZnPg==" alt="QR Code">
+        </div>
+        
+        <div class="steps">
+            <div class="step">
+                <span>پاش دابەزاندن، فایلەکە بکەرە ناو AltStore یان Cydia Impactor</span>
+                <div class="step-number">1</div>
+            </div>
+            <div class="step">
+                <span>ڕێگە بە دانانی بەرنامەکە بدە لە ڕێگای Settings > General > Profiles</span>
+                <div class="step-number">2</div>
+            </div>
+            <div class="step">
+                <span>بەرنامەکە بکەرەوە و ڕەزامەندی بدە بە مافیەکان</span>
+                <div class="step-number">3</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const downloadBtn = document.getElementById('downloadBtn');
+            
+            downloadBtn.addEventListener('click', function() {
+                // Replace with your actual IPA file URL
+                const ipaUrl = 'https://file.ipaomtk.com/ipa/InShot-ipaomtk.com.ipa';
+                
+                // Create a temporary link to trigger download
+                const link = document.createElement('a');
+                link.href = ipaUrl;
+                link.download = 'https://file.ipaomtk.com/ipa/InShot-ipaomtk.com.ipa';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                
+                // Show alert (optional)
+                alert('داگرتنی فایلی IPA دەستیپێکرد! پاش تەواوبوون بیکەرە ناو AltStore.');
+            });
+            
+            // Animation for the download button
+            downloadBtn.addEventListener('mouseover', function() {
+                this.style.background = 'linear-gradient(90deg, var(--red), var(--yellow))';
+            });
+            
+            downloadBtn.addEventListener('mouseout', function() {
+                this.style.background = 'linear-gradient(90deg, var(--yellow), var(--red))';
+            });
+        });
+    </script>
+</body>
+</html>
